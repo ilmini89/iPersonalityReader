@@ -1,0 +1,247 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <h4> Original Image</h4>
+            <img width="100%" height="75%" src="{{imagesource2}}" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <h4> Cropped Image </h4>
+            <img width="100%" height="100%" src="{{imagesource}}" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <h4> Your Big Five Personality Traits</h4>
+            
+            
+                   
+ <h4>Extraversion: </h4> <br>           
+  
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id ="pr1" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+      
+    </div>
+  </div>
+  <h4>Neuroticism:</h4><br>
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id = "pr2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+      
+    </div>
+  </div>
+  <h4>Agreeableness:</h4><br>
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id = "pr3" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+      
+    </div>
+  </div>
+  <h4>Conscientiousness:</h4><br>
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id="pr4" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+     
+    </div>
+  </div>
+  <h4>Openness:</h4><br>
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id="pr5" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+      
+    </div>
+  </div>
+  <h4>Additional Factor</h4>
+<h4>Interview :</h4><br>
+  <div class="progress">
+  
+    <div class="progress-bar" role="progressbar" id="pr6" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="color:black;">
+      
+    </div>
+  </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      
+ <script>
+ 
+ if ({{extraversion*100}} <50) {
+ document.getElementById("pr1").style.background = "red";
+} else if ({{extraversion*100}} <60  ) {
+ document.getElementById("pr1").style.background = "orange";
+ }else if ({{extraversion*100}} <70  ) {
+ document.getElementById("pr1").style.background = "yellow";
+ }else if ({{extraversion*100}} <100  ) {
+ document.getElementById("pr1").style.background = "green";
+ }
+ 
+var elem = document.getElementById("pr1");   
+  var width1 = 0;
+  var id1 = setInterval(frame, 1);
+  function frame() {
+    if (width1 >= {{extraversion*100}}) {
+      clearInterval(id1);
+    } else {
+      width1++; 
+      elem.style.width = width1 + '%'; 
+      elem.innerText=width1+'%';
+    }
+  
+}
+ if ({{neuroticism*100}} <50 ) {
+ document.getElementById("pr2").style.background = "red";
+} else if ({{neuroticism*100}} <60  ) {
+ document.getElementById("pr2").style.background = "orange";
+ }else if ({{neuroticism*100}} <70  ) {
+ document.getElementById("pr2").style.background = "yellow";
+ }else if ({{neuroticism*100}} <100  ) {
+ document.getElementById("pr2").style.background = "green";
+ }
+ 
+ 
+ var elem1 = document.getElementById("pr2");   
+  var width2 = 0;
+  var id2 = setInterval(frame2, 2);
+  function frame2() {
+    if (width2 >= {{neuroticism*100}}) {
+      clearInterval(id2);
+    } else {
+      width2++; 
+      elem1.style.width = width2 + '%'; 
+      elem1.innerText=width2+'%';
+    }
+  
+}
+ 
+ 
+ 
+  if ({{agreeableness*100}} <50 ) {
+ document.getElementById("pr3").style.background = "red";
+} else if ({{agreeableness*100}} <60 ) {
+ document.getElementById("pr3").style.background = "orange";
+ }else if ({{agreeableness*100}} <70  ) {
+ document.getElementById("pr3").style.background = "yellow";
+ }else if ({{agreeableness*100}} <100  ) {
+ document.getElementById("pr3").style.background = "green";
+ }
+ 
+  var elem2 = document.getElementById("pr3");   
+  var width3 = 0;
+  var id3 = setInterval(frame3, 3);
+  function frame3() {
+    if (width3 >= {{agreeableness*100}}) {
+      clearInterval(id3);
+    } else {
+      width3++; 
+      elem2.style.width = width3 + '%'; 
+      elem2.innerText=width3+'%';
+    }
+  
+}
+ 
+ if ({{conscientiousness*100}} <50 ) {
+ document.getElementById("pr4").style.background = "red";
+} else if ({{conscientiousness*100}} <60  ) {
+ document.getElementById("pr4").style.background = "orange";
+ }else if ({{conscientiousness*100}} <70  ) {
+ document.getElementById("pr4").style.background = "yellow";
+ }else if ({{conscientiousness*100}} <100  ) {
+ document.getElementById("pr4").style.background = "green";
+ }
+ 
+ 
+  var elem3 = document.getElementById("pr4");   
+  var width4 = 0;
+  var id4 = setInterval(frame4, 4);
+  function frame4() {
+    if (width4 >= {{conscientiousness*100}}) {
+      clearInterval(id4);
+    } else {
+      width4++; 
+      elem3.style.width = width4 + '%'; 
+      elem3.innerText=width4+'%';
+    }
+  
+}
+ 
+ 
+ 
+ 
+  if ({{openness*100}} <50 ) {
+ document.getElementById("pr5").style.background = "red";
+} else if ({{openness*100}} <60  ) {
+ document.getElementById("pr5").style.background = "orange";
+ }else if ({{openness*100}} <70  ) {
+ document.getElementById("pr5").style.background = "yellow";
+ }else if ({{openness*100}} <100  ) {
+ document.getElementById("pr5").style.background = "green";
+ }
+ 
+ 
+ 
+  
+  var elem4 = document.getElementById("pr5");   
+  var width5 = 0;
+  var id5 = setInterval(frame5, 1);
+  function frame5() {
+    if (width5 >= {{openness*100}}) {
+      clearInterval(id5);
+    } else {
+      width5++; 
+      elem4.style.width = width5 + '%'; 
+      elem4.innerText=width5+'%';
+    }
+  
+}
+
+
+  if ({{interview*100}} <50 ) {
+ document.getElementById("pr6").style.background = "red";
+} else if ({{interview*100}} <60  ) {
+ document.getElementById("pr6").style.background = "orange";
+ }else if ({{interview*100}} <70  ) {
+ document.getElementById("pr6").style.background = "yellow";
+ }else if ({{interview*100}} <100  ) {
+ document.getElementById("pr6").style.background = "green";
+ }
+ 
+ 
+ 
+  
+  var elem5 = document.getElementById("pr6");   
+  var width6 = 0;
+  var id6 = setInterval(frame6, 1);
+  function frame6() {
+    if (width6 >= {{interview*100}}) {
+      clearInterval(id6);
+    } else {
+      width6++; 
+      elem5.style.width = width6 + '%'; 
+      elem5.innerText=width6+'%';
+    }
+  
+}
+
+ 
+ 
+</script>     
+      
+      
+      
+{% endblock %}
+
+
+
+
+
+
+
+

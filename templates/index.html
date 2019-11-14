@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BiG Five Personality Detection App</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  
+</style>
+               
+            </head>
+            <body>
+            
+  
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#section2" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Big Five Traits</a>
+  
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+   
+  
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#section2" class="w3-bar-item w3-button">Big Five Traits</a>
+    
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    
+  </div>
+  
+  
+  
+</div>
+
+
+
+            <br>
+            <br>
+            <div class="container-fluid">
+                <div class="row content">
+                    
+                        <br>
+                            
+                            <div class="col-sm-12">
+                                <div class="well">
+                                    
+                                    <form action="" method=post enctype=multipart/form-data >
+                                        <table>
+                                        
+                                        <tr>
+                                        <td style="width:20%; "><input type=file name=file>
+                                        </td>
+                                        <td><input type=submit value=Upload style="
+  border: box;
+  
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;" >
+                                        </td>
+                                        
+                                        </tr>
+                                        </table>
+                                        
+                                            
+                                            </form>
+                                           
+  
+
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                        {% block content %}
+                                        
+                                        {% endblock %}
+                                        
+                                        <div class="well" id="section2">
+                                            
+                                            
+                                            
+                                            
+                                            <h2 class="w3-text-teal">What is Big Five ?</h2>
+                                            <p>Personality research has generated a variety of different theories that attempt to define and measure personality. The most widely accepted taxonomy of personality among industrial-organizational psychologists is the Big Five Personality Traits model, or the Five Factor Model of personality. The Five Factor Model breaks personality down into five components: Agreeableness, Conscientiousness, Extraversion, Openness, and Neuroticism. Personality tests that are based on this model measure where an individual lies on the spectrum of each of the five traits.
+                                           </p>
+                                            
+                                            
+                                            <h4 class="w3-text-teal">Each trait measures a unique aspect of human personality: </h4>
+                                            
+                                            <ul>
+                                                
+                                                <li><b>Extraversion: </b>This is characterized by excitability, sociability, talkativeness, assertiveness, and high amounts of emotional expressiveness</li>
+                                                <li><b>Neuroticism: </b> This is a trait characterized by sadness, moodiness, and emotional instability. </li>
+                                                
+                                                <li><b>Agreeableness: </b> This personality dimension includes attributes such as trust, altruism, kindness, affection, and other prosocial behaviors.</li>
+                                                <li><b>Conscientiousness: </b> This trait features characteristics such as imagination and insight. People who are high in this trait also tend to have a broad range of interests. They are curious about the world and other people and eager to learn new things and enjoy new experiences.</li>
+                                                <li><b>Openness: </b> This trait features characteristics such as imagination and insight, and those
+high in this trait also tend to have a broad range of interests.</li>
+                                                
+                                            </ul>
+                                            <p>Additionally there is an <b> Interview </b> factor which describes the person’s capability at an interview
+                                           </p>
+                                            <img width="50%" height="30%" src="../static/big-five1.jpg" style="display: block;
+                                                 margin-left: auto;
+                                                 margin-right: auto; " />
+                                            
+                                            <p style="text-align: center;"> Figure 1: Big Five Personality Schema and Sub Traits </p>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+  <div class="w3-text-teal">
+    <h2> Contact Us <h2>
+    </div>
+    <div class="col-sm-6">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">W. M. K. S. Ilmini</span></div>
+      
+      <h3>Address</h3>
+      <p>University Of Sri Jayewardenepura.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Gangodawela, Nugegoda</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +94 775278643</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  wmksilmini@gmail.com</p>  
+      
+      
+      </form>
+    </div>
+    
+    
+    <div class="col-sm-6">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
+      
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">T. G. I. Fernando</span></div>
+      
+      <h3>Address</h3>
+      <p>University Of Sri Jayewardenepura.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Gangodawela, Nugegoda</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +94 11 275 8911</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  gishantha@sjp.ac.lk</p>  
+      
+      
+      </form>
+    </div>
+    
+    
+  </div>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  
+  <p> Copyright © 2019</p>
+  <p> W. M. K. S. Ilmini</p>
+  
+
+  
+</footer>
+                       <script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script> 
+                    </body>
+                </html>
+                
